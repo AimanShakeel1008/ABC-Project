@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         // Define the default Python interpreter
-        PYTHON = "python3"
+        PYTHON = "py"
     }
 
     stages {

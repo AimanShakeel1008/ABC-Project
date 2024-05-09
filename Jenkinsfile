@@ -21,20 +21,6 @@ pipeline {
             }
         }
 
-        stage('Install Dependencies') {
-            steps {
-                echo 'Installing required Python packages...'
-                script {
-                    // Install Python dependencies
-                    if (isUnix()) {
-                        sh "${env.PYTHON} -m pip install -r requirements.txt"
-                    } else {
-                        bat "${env.PYTHON} -m pip install -r requirements.txt"
-                    }
-                }
-            }
-        }
-
         stage('Run Python Scripts') {
             steps {
                 echo 'Running Python scripts...'
